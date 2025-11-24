@@ -2,7 +2,7 @@
 
 import { FaEnvelope, FaEnvelopeOpenText, FaHome, FaMapMarkerAlt, FaPhoneAlt, FaProjectDiagram, FaUser, FaGithub, FaLinkedin } from "react-icons/fa";
 import ResumeButton from "./ResumeButton";
-// import HeroSection from "./HeroSection";
+import HeroSection from "./HeroSection";
 function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
   console.log({ isMobileOpen, setIsMobileOpen })
   const menuItems = [
@@ -42,7 +42,7 @@ function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
           <p className="text-xs text-gray-400">Frontend Developer & UI/UX Designer</p>
           <br />
           <ResumeButton></ResumeButton>
-          {/* <HeroSection></HeroSection> */}
+          <HeroSection></HeroSection>
         </div>
 
         {/* Contact Info */}
