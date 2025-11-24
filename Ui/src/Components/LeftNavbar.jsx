@@ -42,6 +42,7 @@ function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
           <p className="text-xs text-gray-400">Frontend Developer & UI/UX Designer</p>
           <br />
           <ResumeButton></ResumeButton>
+          <br />
           <HeroSection></HeroSection>
         </div>
 
