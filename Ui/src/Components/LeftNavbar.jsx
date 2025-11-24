@@ -1,6 +1,8 @@
 
 
 import { FaEnvelope, FaEnvelopeOpenText, FaHome, FaMapMarkerAlt, FaPhoneAlt, FaProjectDiagram, FaUser, FaGithub, FaLinkedin } from "react-icons/fa";
+import ResumeButton from "./ResumeButton";
+import HeroSection from "./HeroSection";
 function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
   console.log({ isMobileOpen, setIsMobileOpen })
   const menuItems = [
@@ -38,24 +40,27 @@ function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
           />
           <h2 className="text-lg font-bold">Tharun Ravi</h2>
           <p className="text-xs text-gray-400">Frontend Developer & UI/UX Designer</p>
+          <br />
+          <ResumeButton></ResumeButton>
+          <HeroSection></HeroSection>
         </div>
 
         {/* Contact Info */}
-       {/* Contact Info */}
-<ul className="flex flex-col justify-start space-y-5 px-8 py-6 mb-8 text-sm text-gray-300 border-b border-gray-800">
-  <li className="flex items-center gap-4 hover:text-white transition-colors">
-    <FaPhoneAlt className="text-gray-400 w-5 h-5 flex-shrink-0" />
-    <span className="font-medium truncate">+91 7396994383</span>
-  </li>
-  <li className="flex items-center gap-4 hover:text-white transition-colors">
-    <FaEnvelope className="text-gray-400 w-5 h-5 flex-shrink-0" />
-    <span className="font-medium truncate">tharunravi672@gmail.com</span>
-  </li>
-  <li className="flex items-center gap-4 hover:text-white transition-colors">
-    <FaMapMarkerAlt className="text-gray-400 w-5 h-5 flex-shrink-0" />
-    <span className="font-medium truncate">Bangalore, India</span>
-  </li>
-</ul>
+        {/* Contact Info */}
+        <ul className="flex flex-col justify-start space-y-5 px-8 py-6 mb-8 text-sm text-gray-300 border-b border-gray-800">
+          <li className="flex items-center gap-4 hover:text-white transition-colors">
+            <FaPhoneAlt className="text-gray-400 w-5 h-5 flex-shrink-0" />
+            <span className="font-medium truncate">+91 7396994383</span>
+          </li>
+          <li className="flex items-center gap-4 hover:text-white transition-colors">
+            <FaEnvelope className="text-gray-400 w-5 h-5 flex-shrink-0" />
+            <span className="font-medium truncate">tharunravi672@gmail.com</span>
+          </li>
+          <li className="flex items-center gap-4 hover:text-white transition-colors">
+            <FaMapMarkerAlt className="text-gray-400 w-5 h-5 flex-shrink-0" />
+            <span className="font-medium truncate">Bangalore, India</span>
+          </li>
+        </ul>
 
 
 
