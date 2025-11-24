@@ -1,13 +1,12 @@
-import React from 'react'
-// import About from '.'
-import LeftNavbar from './Components/LeftNavbar'
-import MainNavbar from './Components/MainNavbar'
+
 import About from './Pages/About'
+import Home from './Pages/Home'
 
 function App() {
   return (
     <>    
-    {/* <LeftNavbar></LeftNavbar> */}
+    <Home></Home>
+
     <About></About>
     </>
   )
