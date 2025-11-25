@@ -7,7 +7,6 @@ import Spotlight from "../Components/spotlight-new";
 function Home() {
   return (
     <div className="relative min-h-screen bg-gray-950 text-white flex flex-col justify-center items-center px-6 md:px-20 overflow-hidden">
-
       {/* Animated Spotlight Background */}
       <Spotlight
         gradientFirst="radial-gradient(68.54% 68.72% at 55% 31%, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 80%)"

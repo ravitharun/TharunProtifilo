@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "provider": "Coursera",
+    "certificateTitle": "Google Data Analytics Certificate",
+    "expiry": "No Expiry",
+    "linkedinUrl": "https://coursera.org/verify/ABC123"
+  },
+  {
+    "id": 2,
+    "provider": "Udemy",
+    "certificateTitle": "React JS Complete Guide",
+    "expiry": "No Expiry",
+    "linkedinUrl": "https://udemy.com/certificate/REACT123"
+  },
+  {
+    "id": 3,
+    "provider": "LinkedIn Learning",
+    "certificateTitle": "JavaScript Essential Training",
+    "expiry": "No Expiry",
+    "linkedinUrl": "https://linkedin.com/learning/certificates/JS123"
+  },
+  {
+    "id": 4,
+    "provider": "Google",
+    "certificateTitle": "Google Cloud Fundamentals",
+    "expiry": "2027-12-30",
+    "linkedinUrl": "https://google.com/cert/GCLOUD123"
+  }
+]
