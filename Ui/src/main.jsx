@@ -5,6 +5,7 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Loader from './Loaders/Loader.jsx';
 import React, { Suspense } from 'react';
+import Certifcations from './Pages/Certifcations.jsx';
 const Home = React.lazy(() => import("./Pages/Home.jsx"));
 const About = React.lazy(() => import("./Pages/About.jsx"));
 createRoot(document.getElementById('root')).render(
@@ -15,19 +16,27 @@ createRoot(document.getElementById('root')).render(
         path="/"
         element={
           <Suspense fallback={<Loader />}>
-           
 
-              <Home />
-           
+
+            <Home />
+
           </Suspense>
         }
       />
       <Route
         path="/about"
         element={
-          <Suspense fallback={<Loader />}>
-            <About />
-          </Suspense>
+
+          <About />
+
+        }
+      />
+      <Route
+        path="/Certifcations"
+        element={
+
+          <Certifcations />
+
         }
       />
     </Routes>
