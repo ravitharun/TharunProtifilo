@@ -28,7 +28,7 @@ function MainNavbar({ setIsMobileOpen }) {
           <li className="hover:text-gray-300 transition-colors cursor-pointer">About</li>
         </Link>
         <li className="hover:text-gray-300 transition-colors cursor-pointer">Skills</li>
-        <li className="hover:text-gray-300 transition-colors cursor-pointer">Projects</li>q
+        <li className="hover:text-gray-300 transition-colors cursor-pointer">Projects</li>
         <Link to="/Certifcations">
         <li className="hover:text-gray-300 transition-colors cursor-pointer">Certifcations</li>
         </Link>
