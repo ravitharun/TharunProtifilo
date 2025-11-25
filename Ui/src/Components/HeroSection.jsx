@@ -2,10 +2,11 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroSection() {
   return (
-    <div className="text-white text-lg font-semibold">
+    <p className="text-white text-s font-semibold">
       <TypeAnimation
         sequence={[
           "Frontend Developer",
+        
           1000,
           "MERN Stack Developer",
           1000,
@@ -22,7 +23,7 @@ export default function HeroSection() {
         speed={50}
         repeat={Infinity}
       />
-    </div>
+    </p>
 
   );
 }
