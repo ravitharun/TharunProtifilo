@@ -20,7 +20,7 @@ function Certifcations() {
             <div className="flex-1 ml-0">
 
                 <div className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800">
-                    <MainNavbar setIsMobileOpen={setIsMobileOpen} />
+                    <MainNavbar setIsMobileOpen={setIsMobileOpen} isMobileOpen={isMobileOpen} />
                 </div>
 
                 <div className="p-6">
