@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { 
-  FaScroll, 
-  FaGraduationCap, 
-  FaLaptopCode, 
-  FaRocket, 
-  FaPalette, 
-  FaLightbulb, 
-  FaBrain 
+import {
+  FaScroll,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaRocket,
+  FaPalette,
+  FaLightbulb,
+  FaBrain
 } from "react-icons/fa";
 
 import { GiCricketBat } from "react-icons/gi";
@@ -17,6 +17,7 @@ import { GiCricketBat } from "react-icons/gi";
 import LeftNavbar from "../Components/LeftNavbar";
 import MainNavbar from "../Components/MainNavbar";
 import Loader from "../Loaders/Loader";
+import { TimelineDemo } from "../Components/TimelineDemo";
 
 export default function About() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -129,7 +130,6 @@ export default function About() {
                   <FaBrain className="text-xl text-purple-400" />
                   Exploring latest technologies
                 </li>
-
                 <li className="flex items-center gap-3">
                   <GiCricketBat className="text-xl text-green-400" />
                   Playing cricket
@@ -139,7 +139,7 @@ export default function About() {
             </section>
 
           </div>
-
+          <TimelineDemo></TimelineDemo>
         </div>
       </div>
     </>
