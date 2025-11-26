@@ -31,6 +31,7 @@ export default function About() {
       <div className="flex min-h-screen bg-gray-900 text-white overflow-hidden">
 
         {/* LEFT NAVBAR */}
+
         <LeftNavbar
           isMobileOpen={isMobileOpen}
           setIsMobileOpen={setIsMobileOpen}
@@ -39,10 +40,12 @@ export default function About() {
         {/* MAIN CONTENT AREA */}
         <div className="flex-1 min-w-0 ml-0">
 
-          <div className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800">
+          <div className="fixed top-0 left-0 right-0 z-[9999] bg-gray-900 border-b border-gray-800">
+
             <MainNavbar setIsMobileOpen={setIsMobileOpen} />
           </div>
-
+<br />
+<br />
           {/* PAGE CONTENT */}
           <div className="px-4 md:px-6 py-8 space-y-10">
 
