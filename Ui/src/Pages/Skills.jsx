@@ -61,12 +61,12 @@ function Skills() {
           {/* Categories in separate boxes */}
           <div className="flex flex-wrap gap-6">
             {Object.entries(skills).map(([category, items], idx) => (
-              <div key={idx} className="flex-1 min-w-[250px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-xl">
+              <div key={idx} className="flex-1 min-w-[250px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-xl" title={category}>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">{category}</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {items.map((skill, i) => (
                     <div key={i} className="flex flex-col items-center justify-center p-4 
-                      bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow hover:scale-105 transition-transform duration-300">
+                      bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow hover:scale-105 transition-transform duration-300" title={skill.name}>
                       {skill.icon}
                       <span className="mt-2 text-sm md:text-base font-semibold text-neutral-200">{skill.name}</span>
                     </div>

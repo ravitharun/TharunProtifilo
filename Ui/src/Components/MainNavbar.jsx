@@ -1,23 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiSun, FiMoon } from "react-icons/fi";
+import ThemeContext from "../Theme";
 
-function MainNavbar({ setIsMobileOpen }) {
+
+
+function MainNavbar({ isMobileOpen, setIsMobileOpen }) {
+  console.log("isMobileOpen", isMobileOpen)
   const location = useLocation(); // for active link
-  const [theme, setTheme] = useState("dark");
+  const { theme, toggleTheme } = useContext(ThemeContext); // this should work now
+  console.log(theme,'theme')
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-    document.documentElement.classList.toggle("dark");
-  };
 
   const menuItems = [
     { name: "About", path: "/about" },
     { name: "Resume", path: "/resume" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Certifications", path: "/certifications" },
-    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -36,11 +36,10 @@ function MainNavbar({ setIsMobileOpen }) {
           <li key={item.name}>
             <Link
               to={item.path}
-              className={`hover:text-cyan-400 transition duration-200 ${
-                location.pathname === item.path
-                  ? "text-cyan-400 border-b-2 border-cyan-400 pb-1"
-                  : ""
-              }`}
+              className={`hover:text-cyan-400 transition duration-200 ${location.pathname === item.path
+                ? "text-cyan-400 border-b-2 border-cyan-400 pb-1"
+                : ""
+                }`}
             >
               {item.name}
             </Link>
@@ -60,7 +59,7 @@ function MainNavbar({ setIsMobileOpen }) {
       </ul>
 
       {/* Mobile Hamburger */}
-      <button
+      {isMobileOpen ? "X" : <button
         className="md:hidden focus:outline-none"
         aria-label="Open menu"
         onClick={() => setIsMobileOpen(true)}
@@ -74,7 +73,7 @@ function MainNavbar({ setIsMobileOpen }) {
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-      </button>
+      </button>}
     </nav>
   );
 }

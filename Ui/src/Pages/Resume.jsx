@@ -22,7 +22,7 @@ function Resume() {
 
                     <div className="fixed top-0 left-0 right-0 z-[9999] bg-gray-900 border-b border-gray-800">
 
-                        <MainNavbar setIsMobileOpen={setIsMobileOpen} />
+                        <MainNavbar setIsMobileOpen={setIsMobileOpen}  isMobileOpen={isMobileOpen}/>
                     </div>
                     <TimelineDemo></TimelineDemo>
                     <Skills></Skills>

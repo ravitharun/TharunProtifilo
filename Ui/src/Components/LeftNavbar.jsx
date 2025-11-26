@@ -130,12 +130,12 @@ import { Link } from "react-router-dom";
 function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
 
   const menuItems = [
-    { title: "Home", icon: <FaHome />, url: "/" },
+    // { title: "Home", icon: <FaHome />, url: "/" },
     { title: "About", icon: <FaUser />, url: "/about" },
-    { title: "Skills", icon: <FaCode />, url: "/Skills" },
-    { title: "Certifications", icon: <FaCertificate />, url: "/Certifcations" },
-    { title: "Projects", icon: <FaProjectDiagram />, url: "/Projects" },
-    { title: "Contact", icon: <FaEnvelopeOpenText />, url: "/Contact" },
+    { title: "Resume", icon: <FaCode />, url: "/resume" },
+    { title: "Portfolio", icon: <FaProjectDiagram />, url: "/portfolio" },
+    { title: "Certifications", icon: <FaCertificate />, url: "/certifications" },
+    { title: "Contact", icon: <FaEnvelopeOpenText />, url: "/contact" },
   ];
 
   return (
