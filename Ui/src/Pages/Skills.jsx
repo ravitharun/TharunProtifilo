@@ -12,7 +12,6 @@ import {
 function Skills() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  // Skills categorized
   const skills = {
     "Frontend / UI": [
       { name: "React.js", icon: <FaReact className="text-blue-400 text-3xl" /> },
@@ -24,7 +23,6 @@ function Skills() {
     "Backend / Server": [
       { name: "Node.js", icon: <FaNodeJs className="text-green-400 text-3xl" /> },
       { name: "Express.js", icon: <FaNodeJs className="text-green-300 text-3xl" /> },
-
     ],
     "Database": [
       { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-3xl" /> },
@@ -41,49 +39,42 @@ function Skills() {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-900 text-white overflow-hidden">
+    <div className="flex min-h-screen bg-gray-900 text-white">
+      
 
-      {/* LEFT NAVBAR */}
-      <LeftNavbar isMobileOpen={isMobileOpen} setIsMobileOpen={setIsMobileOpen} />
 
-      {/* MAIN CONTENT AREA */}
-      <div className="flex-1 min-w-0 ml-0">
+      {/* MAIN CONTENT */}
+      <div className="flex-1 p-10">
 
-        {/* MAIN NAVBAR */}
-        <div className="sticky top-0 z-50 bg-gray-900 border-b border-gray-800">
-          <MainNavbar setIsMobileOpen={setIsMobileOpen} />
-        </div>
 
-        {/* SKILLS SECTION */}
-        <div className="max-w-7xl mx-auto py-20 px-4 md:px-10 space-y-16">
+        <div className="max-w-7xl mx-auto py-10">
 
           <h2 className="text-4xl md:text-5xl font-extrabold 
-            bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-6">
+            bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-8">
             My Skills
           </h2>
 
-          <p className="text-neutral-400 mb-12 max-w-2xl">
-            These are the technologies, tools, and platforms I work with. Organized into Frontend/UI, Backend/Server, Database, and Data Tools for clarity.
+          <p className="text-neutral-400 mb-10 max-w-2xl">
+            These are the technologies, tools, and platforms I work with, organized by categories.
           </p>
 
-          {/* Render each category */}
-          {Object.entries(skills).map(([category, items]) => (
-            <div key={category}>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-purple-300">
-                {category}
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                {items.map((skill, i) => (
-                  <div key={i} className="flex flex-col items-center justify-center p-6 
-                    bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-lg 
-                    hover:scale-105 transition-transform duration-300">
-                    {skill.icon}
-                    <span className="mt-4 text-lg font-semibold text-neutral-200">{skill.name}</span>
-                  </div>
-                ))}
+          {/* Categories in separate boxes */}
+          <div className="flex flex-wrap gap-6">
+            {Object.entries(skills).map(([category, items], idx) => (
+              <div key={idx} className="flex-1 min-w-[250px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-xl">
+                <h3 className="text-2xl font-bold mb-4 text-purple-300">{category}</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {items.map((skill, i) => (
+                    <div key={i} className="flex flex-col items-center justify-center p-4 
+                      bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow hover:scale-105 transition-transform duration-300">
+                      {skill.icon}
+                      <span className="mt-2 text-sm md:text-base font-semibold text-neutral-200">{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
 
         </div>
       </div>

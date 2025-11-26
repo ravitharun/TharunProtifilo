@@ -7,6 +7,7 @@ import Loader from './Loaders/Loader.jsx';
 import React, { Suspense } from 'react';
 import Certifcations from './Pages/Certifcations.jsx';
 import Skills from './Pages/Skills.jsx';
+import Resume from './Pages/Resume.jsx';
 const Home = React.lazy(() => import("./Pages/Home.jsx"));
 const About = React.lazy(() => import("./Pages/About.jsx"));
 createRoot(document.getElementById('root')).render(
@@ -42,10 +43,10 @@ createRoot(document.getElementById('root')).render(
       />
     {/* </Routes> */}
       <Route
-        path="/Skills"
+        path="/resume"
         element={
 
-          <Skills />
+          <Resume />
 
         }
       />
