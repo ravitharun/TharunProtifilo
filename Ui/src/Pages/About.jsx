@@ -142,7 +142,7 @@ export default function About() {
             </section>
 
           </div>
-          <TimelineDemo></TimelineDemo>
+    
         </div>
       </div>
     </>

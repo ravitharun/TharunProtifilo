@@ -11,7 +11,6 @@ function Resume() {
         <>
             <div className="flex min-h-screen bg-gray-900 text-white overflow-hidden">
 
-                {/* LEFT NAVBAR */}
 
                 <LeftNavbar
                     isMobileOpen={isMobileOpen}
@@ -25,8 +24,8 @@ function Resume() {
 
                         <MainNavbar setIsMobileOpen={setIsMobileOpen} />
                     </div>
-                          <TimelineDemo></TimelineDemo>
-                          <Skills></Skills>
+                    <TimelineDemo></TimelineDemo>
+                    <Skills></Skills>
                 </div>
             </div>
         </>
