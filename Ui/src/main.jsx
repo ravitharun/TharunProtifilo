@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Loader from './Loaders/Loader.jsx';
 import React, { Suspense } from 'react';
 import Certifcations from './Pages/Certifcations.jsx';
+import Skills from './Pages/Skills.jsx';
 const Home = React.lazy(() => import("./Pages/Home.jsx"));
 const About = React.lazy(() => import("./Pages/About.jsx"));
 createRoot(document.getElementById('root')).render(
@@ -36,6 +37,15 @@ createRoot(document.getElementById('root')).render(
         element={
 
           <Certifcations />
+
+        }
+      />
+    {/* </Routes> */}
+      <Route
+        path="/Skills"
+        element={
+
+          <Skills />
 
         }
       />
