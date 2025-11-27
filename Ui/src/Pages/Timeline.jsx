@@ -41,16 +41,19 @@ export const Timeline = ({ data }) => {
 
       {/* Header */}
       <div className="max-w-7xl mx-auto pt-20 px-4 md:px-8">
-        <h2 className="text-4xl md:text-5xl mb-4 
-        bg-gradient-to-r from-purple-400 to-blue-400 
-        bg-clip-text text-transparent font-extrabold text-center">
-          My Journey Timeline
-        </h2>
+  <h2
+    className="text-4xl md:text-5xl mb-4 
+    bg-gradient-to-r from-purple-400 to-blue-400 
+    bg-clip-text text-transparent font-extrabold text-center"
+  >
+    My Journey Timeline
+  </h2>
 
-        <p className="text-neutral-300 text-sm md:text-base max-w-md text-center">
-          A small view of my growth and experience over time.
-        </p>
-      </div>
+  <p className="text-neutral-300 text-sm md:text-base max-w-md mx-auto text-center">
+    A timeline showcasing the key milestones in my academic journey and personal growth.
+  </p>
+</div>
+
 
       {/* Timeline */}
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
