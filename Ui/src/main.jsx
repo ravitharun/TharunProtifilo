@@ -8,6 +8,7 @@ import Skills from './Pages/Skills.jsx';
 import Resume from './Pages/Resume.jsx';
 import { ThemeProvider } from './ThemeProvider.jsx';
 import MainNavbar from './Components/MainNavbar.jsx';
+import Portfolio from './Pages/Portfolio.jsx';
 
 const Home = React.lazy(() => import("./Pages/Home.jsx"));
 const About = React.lazy(() => import("./Pages/About.jsx"));
@@ -45,6 +46,10 @@ createRoot(document.getElementById('root')).render(
           <Route
             path="/skills"
             element={<Skills />}
+          />
+          <Route
+            path="/portfolio"
+            element={<Portfolio />}
           />
         </Routes>
       </ThemeProvider>
