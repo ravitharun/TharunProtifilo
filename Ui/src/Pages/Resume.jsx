@@ -6,10 +6,11 @@ import Skills from "./Skills";
 import { Link } from "react-router-dom";
 import { FaBriefcase, FaGraduationCap, FaSuitcase } from "react-icons/fa";
 import { FaUpwork } from "react-icons/fa6";
+import MinNavbar from "../Components/MinNavbar";
 
 export default function Resume() {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
-    const Page = "Education"      
+    const Page = "Education"
     // Work Exp
     console.log(Page)
     return (
@@ -45,32 +46,7 @@ export default function Resume() {
                             <h1 className="text-xl md:text-3xl font-bold text-blue-400 mb-5 text-center">
                                 My Journey Timeline
                             </h1>
-                           <div className="bg-gray-900 shadow-md">
-  <nav className="max-w-6xl mx-auto px-4">
-    <ul className="flex flex-wrap md:flex-nowrap gap-6 py-4 items-center justify-center md:justify-start">
-      <li>
-        <Link
-          to="/resume"
-          className={`flex items-center gap-2 font-semibold transition-colors duration-200 
-            ${Page === "Education" ? "text-blue-400" : "text-white"} hover:text-blue-400`}
-        >
-          <FaGraduationCap className="text-xl" />
-          <span>Education</span>
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="/WorkExp"
-          className={`flex items-center gap-2 font-semibold transition-colors duration-200 
-            ${Page === "Work Exp" ? "text-blue-400" : "text-white"} hover:text-blue-400`}
-        >
-          <FaBriefcase className="text-xl" />
-          <span>Work Exp</span>
-        </Link>
-      </li>
-    </ul>
-  </nav>
-</div>
+                            <MinNavbar Page={Page}></MinNavbar>
                             <br />
 
                             <TimelineDemo />

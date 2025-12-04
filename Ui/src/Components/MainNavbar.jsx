@@ -22,12 +22,11 @@ function MainNavbar({ isMobileOpen, setIsMobileOpen }) {
     { name: "Certifications", path: "/certifications" },
     { name: "Contact", path: "/contact" },
   ];
-
   return (
     <nav className="w-full bg-gray-900 dark:bg-gray-800 text-white flex justify-between items-center px-6 py-3 shadow-md fixed top-0 left-0 right-0 z-50">
       {/* Logo */}
       <Link to="/">
-        <div className="text-xl md:text-2xl font-bold text-cyan-400 tracking-wide">
+        <div className="text-xl md:text-2xl font-bold text-cyan-400 tracking-wide cursor-pointer">
           RaviTharun.dev
         </div>
       </Link>

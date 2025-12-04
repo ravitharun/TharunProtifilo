@@ -9,6 +9,7 @@ import Resume from './Pages/Resume.jsx';
 import { ThemeProvider } from './ThemeProvider.jsx';
 import MainNavbar from './Components/MainNavbar.jsx';
 import Portfolio from './Pages/Portfolio.jsx';
+import WorkExp from './Pages/WorkExp.jsx';
 
 const Home = React.lazy(() => import("./Pages/Home.jsx"));
 const About = React.lazy(() => import("./Pages/About.jsx"));
@@ -38,6 +39,10 @@ createRoot(document.getElementById('root')).render(
           <Route
             path="/certifications"
             element={<Certifcations />}
+          />
+          <Route
+            path="/WorkExp"
+            element={<WorkExp />}
           />
           <Route
             path="/resume"
