@@ -9,7 +9,7 @@ import {
   FaRocket,
   FaPalette,
   FaLightbulb,
-  FaBrain
+  FaBrain,
 } from "react-icons/fa";
 
 import { GiCricketBat } from "react-icons/gi";
@@ -17,7 +17,6 @@ import { GiCricketBat } from "react-icons/gi";
 import LeftNavbar from "../Components/LeftNavbar";
 import MainNavbar from "../Components/MainNavbar";
 import Loader from "../Loaders/Loader";
-import { TimelineDemo } from "../Components/TimelineDemo";
 
 export default function About() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -31,25 +30,31 @@ export default function About() {
       <div className="flex min-h-screen bg-gray-900 text-white overflow-hidden">
 
         {/* LEFT NAVBAR */}
+        <div className="z-[50]">
+          <LeftNavbar
+            isMobileOpen={isMobileOpen}
+            setIsMobileOpen={setIsMobileOpen}
+          />
+        </div>
 
-        <LeftNavbar
-          isMobileOpen={isMobileOpen}
-          setIsMobileOpen={setIsMobileOpen}
-        />
-
-        {/* MAIN CONTENT AREA */}
+        {/* MAIN CONTENT */}
         <div className="flex-1 min-w-0 ml-0">
 
-          <div className="fixed top-0 left-0 right-0 z-[9999] bg-gray-900 border-b border-gray-800">
-
-            <MainNavbar setIsMobileOpen={setIsMobileOpen} isMobileOpen={isMobileOpen}/>
+          {/* MAIN NAVBAR */}
+          <div className="fixed top-0 left-0 right-0 z-[40] bg-gray-900 border-b border-gray-800">
+            <MainNavbar
+              setIsMobileOpen={setIsMobileOpen}
+              isMobileOpen={isMobileOpen}
+            />
           </div>
-<br />
-<br />
+
+          <br />
+          <br />
+
           {/* PAGE CONTENT */}
           <div className="px-4 md:px-6 py-8 space-y-10">
 
-            {/* ABOUT ME SECTION */}
+            {/* ABOUT ME */}
             <section
               data-aos="fade-up"
               className="bg-gray-800/40 border border-gray-700 p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-sm"
@@ -118,7 +123,6 @@ export default function About() {
               </h2>
 
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm md:text-base text-gray-300">
-
                 <li className="flex items-center gap-3">
                   <FaPalette className="text-xl text-blue-400" />
                   Designing clean & modern UIs
@@ -133,16 +137,15 @@ export default function About() {
                   <FaBrain className="text-xl text-purple-400" />
                   Exploring latest technologies
                 </li>
+
                 <li className="flex items-center gap-3">
                   <GiCricketBat className="text-xl text-green-400" />
                   Playing cricket
                 </li>
-
               </ul>
             </section>
 
           </div>
-    
         </div>
       </div>
     </>

@@ -3,7 +3,9 @@ import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiSun, FiMoon } from "react-icons/fi";
 import ThemeContext from "../Theme";
+// import { FaCrosshairs } from "react-icons/fa";
 
+import { FaXmark } from "react-icons/fa6";
 
 
 function MainNavbar({ isMobileOpen, setIsMobileOpen }) {
@@ -59,7 +61,9 @@ function MainNavbar({ isMobileOpen, setIsMobileOpen }) {
       </ul>
 
       {/* Mobile Hamburger */}
-      {isMobileOpen ? "X" : <button
+      {isMobileOpen ? <>
+      
+     <FaXmark></FaXmark   > </> : <button
         className="md:hidden focus:outline-none"
         aria-label="Open menu"
         onClick={() => setIsMobileOpen(true)}
