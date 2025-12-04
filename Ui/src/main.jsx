@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider> {/* Wrap the whole app here */}
-        <MainNavbar /> {/* Navbar can now access theme */}
+        {/* <MainNavbar /> Navbar can now access theme */}
         <Routes>
           <Route
             path="/"

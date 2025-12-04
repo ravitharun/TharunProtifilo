@@ -146,7 +146,11 @@ function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
         ${isMobileOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
         onClick={() => setIsMobileOpen(false)}
       />
-
+<br />
+<br />
+<br />
+<br />
+<br />
       {/* Sidebar */}
       <aside
         className={`
