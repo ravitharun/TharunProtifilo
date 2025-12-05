@@ -86,7 +86,9 @@ export function TimelineDemo() {
       Role: "BackEnd Developer",
       JoBType: "Internship",
       Duration: "6Months",
+      IsWorking:true,
       Location: "Pune",
+      worktype:"Remote",
       Exp:"1Month"
 
     }

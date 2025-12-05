@@ -9,11 +9,9 @@ import { FaXmark } from "react-icons/fa6";
 
 
 function MainNavbar({ isMobileOpen, setIsMobileOpen }) {
-  console.log("isMobileOpen", isMobileOpen)
   const location = useLocation(); // for active link
-  console.log(location,'location')
   const { theme, toggleTheme } = useContext(ThemeContext); // this should work now
-  console.log(theme,'theme')
+
 
 
   const menuItems = [

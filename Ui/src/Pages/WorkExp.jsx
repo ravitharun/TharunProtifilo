@@ -43,10 +43,10 @@ export default function WorkExp() {
 
                         {/* TIMELINE SECTION */}
                         <section className="bg-gray-800/40 border border-gray-700 p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-sm">
-                            <h1 className="text-xl md:text-3xl font-bold text-blue-400 mb-5 text-center">
-                                My WorkExp
-                            </h1>
+                           <center>
+
                             <MinNavbar Page={Page}></MinNavbar>
+                           </center>
                             <br />
 
                             <TimelineDemo />

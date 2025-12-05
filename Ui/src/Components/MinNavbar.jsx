@@ -7,14 +7,14 @@ function MinNavbar({ Page }) {
     return (
         <>
 
-            <div className="bg-gray-900 shadow-md">
-                <nav className="max-w-6xl mx-auto px-4">
-                    <ul className="flex flex-wrap md:flex-nowrap gap-6 py-4 items-center justify-center md:justify-start">
+            <div className="bg-gray-900 shadow-md ">
+                <nav className="max-w-6xl mx-auto px-4 ">
+                    <ul className="flex flex-wrap md:flex-nowrap gap-6 py-4 items-center justify-center md:justify-start ">
                         <li>
                             <Link
                                 to="/resume"
                                 className={`flex items-center gap-2 font-semibold transition-colors duration-200 
-            ${Page === "Education" ? "text-blue-400" : "text-white"} hover:text-blue-400`}
+            ${Page === "Education" ? "text-blue-400" : "text-white"} hover:text-blue-400 `}
                             >
                                 <FaGraduationCap className="text-xl" />
                                 <span>Education</span>
