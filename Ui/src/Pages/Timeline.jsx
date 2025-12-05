@@ -7,12 +7,15 @@ import {
   FaGraduationCap,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
-export const Timeline = ({ data }) => {
+export const Timeline = ({ data, Work }) => {
+  // console.log(JSON.stringify(Work,2,null), 'WorkExp fromTimeline.jsx ')
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
-
+const location=useLocation('')
+console.log(location.pathname,"location.pathname")
   useEffect(() => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
@@ -41,18 +44,18 @@ export const Timeline = ({ data }) => {
 
       {/* Header */}
       <div className="max-w-7xl mx-auto pt-20 px-4 md:px-8">
-  <h2
-    className="text-4xl md:text-5xl mb-4 
+        <h2
+          className="text-4xl md:text-5xl mb-4 
     bg-gradient-to-r from-purple-400 to-blue-400 
     bg-clip-text text-transparent font-extrabold text-center"
-  >
-    My Journey Timeline
-  </h2>
+        >
+          My Journey Timeline
+        </h2>
 
-  <p className="text-neutral-300 text-sm md:text-base max-w-md mx-auto text-center">
-    A timeline showcasing the key milestones in my academic journey and personal growth.
-  </p>
-</div>
+        <p className="text-neutral-300 text-sm md:text-base max-w-md mx-auto text-center">
+          A timeline showcasing the key milestones in my academic journey and personal growth.
+        </p>
+      </div>
 
 
       {/* Timeline */}

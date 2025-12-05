@@ -2,8 +2,8 @@ import React from 'react'
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-function MinNavbar({Page}) {
-    console.log( "Page formt eh min anvb" ,Page)
+function MinNavbar({ Page }) {
+    console.log("Page formt eh min anvb", Page)
     return (
         <>
 
