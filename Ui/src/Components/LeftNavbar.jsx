@@ -126,6 +126,7 @@ import {
 import ResumeButton from "./ResumeButton";
 import HeroSection from "./HeroSection";
 import { Link } from "react-router-dom";
+import Share from "./Share";
 
 function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
 
@@ -187,11 +188,11 @@ function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
         <ul className="px-8 py-6 mb-4 space-y-5 text-sm text-gray-300 border-b border-gray-800">
           <li className="flex items-center gap-4 hover:text-white transition">
             <FaPhoneAlt className="text-gray-400 w-5 h-5" />
-            <span className="truncate">+91 7396994383</span>
+            <span className="truncate"><a href="tel:+91 7396994383">+91 7396994383</a></span>
           </li>
           <li className="flex items-center gap-4 hover:text-white transition">
             <FaEnvelope className="text-gray-400 w-5 h-5" />
-            <span className="truncate">tharunravi672@gmail.com</span>
+            <span className="truncate"><a href="mailto:tharunravi672@gmail.com">tharunravi672@gmail.com</a></span>
           </li>
           <li className="flex items-center gap-4 hover:text-white transition">
             <FaMapMarkerAlt className="text-gray-400 w-5 h-5" />
@@ -236,6 +237,7 @@ function LeftNavbar({ isMobileOpen, setIsMobileOpen }) {
           >
             <FaLinkedin size={22} />
           </a>
+          <Share></Share>
         </div>
       </aside>
     </>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import MainNavbar from '../Components/MainNavbar'
 import LeftNavbar from '../Components/LeftNavbar'
+import TopScroll from '../Components/TopScroll';
 
 function Portfolio() {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -17,6 +18,12 @@ function Portfolio() {
                             setIsMobileOpen={setIsMobileOpen}
                         />
                     </div>
+                    
+<h3>                    adding soon
+
+
+
+</h3>   
 
                     {/* MAIN CONTENT AREA */}
                     <div className="flex-1 min-w-0 ml-0">
@@ -29,6 +36,7 @@ function Portfolio() {
                             />
                         </div>
                     </div>
+                 <TopScroll></TopScroll>
                 </div>
             </>
         </>

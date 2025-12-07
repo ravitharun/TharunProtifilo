@@ -24,11 +24,11 @@ function MainNavbar({ isMobileOpen, setIsMobileOpen }) {
   return (
     <nav className="w-full bg-gray-900 dark:bg-gray-800 text-white flex justify-between items-center px-6 py-3 shadow-md fixed top-0 left-0 right-0 z-50">
       {/* Logo */}
-      <Link to="/">
         <div className="text-xl md:text-2xl font-bold text-cyan-400 tracking-wide cursor-pointer">
+      <Link to="/">
           RaviTharun.dev
-        </div>
       </Link>
+        </div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center space-x-6 font-medium">

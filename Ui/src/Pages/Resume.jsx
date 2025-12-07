@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { FaBriefcase, FaGraduationCap, FaSuitcase } from "react-icons/fa";
 import { FaUpwork } from "react-icons/fa6";
 import MinNavbar from "../Components/MinNavbar";
+import TopScroll from "../Components/TopScroll";
 
 export default function Resume() {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -43,7 +44,7 @@ export default function Resume() {
 
                         {/* TIMELINE SECTION */}
                         <section className="bg-gray-800/40 border border-gray-700 p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-sm">
-                        
+
                             <MinNavbar Page={Page}></MinNavbar>
                             <br />
 
@@ -61,6 +62,7 @@ export default function Resume() {
 
                     </div>
                 </div>
+                <TopScroll></TopScroll>
             </div>
         </>
     );

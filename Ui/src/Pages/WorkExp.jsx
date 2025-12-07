@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { FaBriefcase, FaGraduationCap, FaSuitcase } from "react-icons/fa";
 import { FaUpwork } from "react-icons/fa6";
 import MinNavbar from "../Components/MinNavbar";
+import TopScroll from "../Components/TopScroll";
 
 export default function WorkExp() {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -63,6 +64,7 @@ export default function WorkExp() {
 
                     </div>
                 </div>
+                <TopScroll></TopScroll>
             </div>
         </>
     );

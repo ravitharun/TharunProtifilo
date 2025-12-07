@@ -16,7 +16,9 @@ import { GiCricketBat } from "react-icons/gi";
 
 import LeftNavbar from "../Components/LeftNavbar";
 import MainNavbar from "../Components/MainNavbar";
-import Loader from "../Loaders/Loader";
+// import Loader from "../Loaders/Loader";
+import Top from "../Components/TopScroll";
+import TopScroll from "../Components/TopScroll";
 
 export default function About() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -24,7 +26,6 @@ export default function About() {
   useEffect(() => {
     AOS.init();
   }, []);
-
   return (
     <>
       <div className="flex min-h-screen bg-gray-900 text-white overflow-hidden">
@@ -146,6 +147,7 @@ export default function About() {
             </section>
 
           </div>
+          <TopScroll></TopScroll>
         </div>
       </div>
     </>
