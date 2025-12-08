@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -17,11 +17,15 @@ import { GiCricketBat } from "react-icons/gi";
 import LeftNavbar from "../Components/LeftNavbar";
 import MainNavbar from "../Components/MainNavbar";
 // import Loader from "../Loaders/Loader";
-import Top from "../Components/TopScroll";
 import TopScroll from "../Components/TopScroll";
+import ThemeContext from "../Theme";
 
 export default function About() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+    // const { active, setActive } = useContext(ThemeContext);
+      const {theme, setTheme} = useContext(ThemeContext);
+    
+    console.log("theme",theme)
 
   useEffect(() => {
     AOS.init();

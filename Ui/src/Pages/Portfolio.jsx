@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import MainNavbar from '../Components/MainNavbar'
 import LeftNavbar from '../Components/LeftNavbar'
 import TopScroll from '../Components/TopScroll';
 import Project from '../Data/Projects.json'
 import ProjectNavbr from '../Components/ProjectNavbr';
+import { ProjectContext } from '../ProjectCrete';
 
 function Portfolio() {
 
     const [isMobileOpen, setIsMobileOpen] = useState(false);
-
+  const { activeCategory, setActiveCategory } = useContext(ProjectContext);
+  console.log(activeCategory,'activeCategory from the min page')
     return (
         <>
             <div className="flex min-h-screen bg-gray-900 text-white overflow-hidden">

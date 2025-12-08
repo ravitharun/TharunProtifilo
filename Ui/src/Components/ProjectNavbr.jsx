@@ -1,17 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Project from '../Data/Projects.json';
+import { ProjectContext } from '../ProjectCrete';
 
 function ProjectNavbr() {
-    const [active, setActive] = useState("All");
-
+    const { activeCategory, setActiveCategory,filteredData } = useContext(ProjectContext);
+    console.log(filteredData,'filteredData in project navbr')
     const PType = ["All", "Web", "Ai & Ml", "Data Analystics", "Design"];
-    const Data = Project.filter((proj) => {
-        if (active === "All") {
-            return true;
-        }
-        return proj.ProjectType === active;
-    }
-    );
 
     return (
         <>
@@ -24,11 +18,11 @@ function ProjectNavbr() {
                     {PType.map((type, idx) => (
                         <button
                             key={idx}
-                            onClick={() => setActive(type)}
+                            onClick={() => setActiveCategory(type)}
                             className={`
                                 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
                                 border shadow-sm
-                                ${active === type
+                                ${activeCategory === type
                                     ? "bg-gradient-to-r from-blue-600 to-blue-400 text-white border-blue-500 shadow-blue-500/50 shadow-md"
                                     : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10"}
                             `}
